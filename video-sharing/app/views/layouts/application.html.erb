@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Landry's Rails Application</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <style>
+          .personalized{
+              font-family: Courier; 
+              text-align: center;
+              background-color: black;
+              color: black;
+              background-image: url("https://d2nikgq6rubtj8.cloudfront.net/web/2016/10/04/halloween-banner-04-10-16.gif");
+              padding: 20px 0px 23px 0px;
+          }
+      </style>
+  </head>
+
+  <body>
+      <header>
+          <h1 class="personalized">Landry's Rails Application</h1>
+      </header>
+    <%= yield %>
+  </body>
+</html>
